@@ -856,7 +856,7 @@ var viewer3d;
 </div>
 <p>
 <script type="text/javascript">
-        // 建立 Viewer 管理物件
+// 建立 Viewer 管理物件
         var viewers = {};
 
         function getOptions(viewerId) {
@@ -910,11 +910,14 @@ var viewer3d;
             var opt2 = getOptions(2);
             opt2.SceneUrl = 'https://s104.cycu.org/~41223150/41223150_w16_exam1_02-1.stl';
             readSTLfile(2, opt2);
+            // 初始化第三個 Viewer
+            var opt3 = getOptions(3);
+            opt3.SceneUrl = 'https://s104.cycu.org/~41223150/41223150_w16_exam1_組合圖-1.stl';
+            readSTLfile(3, opt3);
         }
 
         // 初始化所有 Viewer
         initViewers();
-    
 </script>
 </p><h1>HW3</h1>
 <p>Homework 3 (20%):</p>
@@ -957,7 +960,7 @@ var viewer3d;
 <p>建立模擬場景操作過程影片如下:</p>
 <p style="padding-left: 30px;">請將操作影片嵌入 ......</p>
 <p style="padding-left: 30px;">所完成的模擬場景與控制程式檔案下載</p>
-<p style="padding-left: 30px;"></p><h1>Final Report</h1>
+<h3>w16_exam3</h3><h1>Final Report</h1>
 <p>期末口頭與書面專題報告 (30%)</p>
 <p>期末口頭專題報告影片:</p>
 <p style="padding-left: 30px;">......</p>
