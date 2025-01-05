@@ -953,7 +953,116 @@ var viewers = {};
 <p style="padding-left: 30px;">完成上述流程後, 請將 HW3 自評分數輸入 cad2024 自評表單中.</p>
 <h3>w16_exam2</h3>
 <p><span>NX2312零件繪圖：將量測的尺寸小數點後兩位改為自己的學號最後兩碼<span style="background-color: #ff00ff;">(.50)</span>，再以Solvespace進行組配，將過程錄製為影片，並將檔案設為"學號_w16_exam2.7z"</span></p>
-<p>以下是nx的影片: <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bdwysTYvkOE?si=hc83zFEX1vAICZow" title="YouTube video player" width="560"></iframe> <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/aglAVHT9X9M?si=5ttUDblpLIQ7lCeW" title="YouTube video player" width="560"></iframe> <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/zAp5ovav_BU?si=YQ80e2ggYDCf2aOg" title="YouTube video player" width="560"></iframe></p><h1>HW4</h1>
+<p>以下是nx的影片: <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bdwysTYvkOE?si=hc83zFEX1vAICZow" title="YouTube video player" width="560"></iframe> <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/aglAVHT9X9M?si=5ttUDblpLIQ7lCeW" title="YouTube video player" width="560"></iframe> <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/zAp5ovav_BU?si=YQ80e2ggYDCf2aOg" title="YouTube video player" width="560"></iframe></p>
+<p>以下模型展示:</p>
+<p></p>
+<p>Multiple 3D Viewers</p>
+<script src="/static/jsc3d.js" type="text/javascript"></script>
+<!-- Viewer 1 -->
+<div class="viewer-container">
+<p><canvas height="600" id="cv1" width="800"></canvas></p>
+<div class="controls">Model Color: <input id="mdlClr1" onchange="changeOption(1, 'ModelColor', this.value)" type="color" value="#00ff40"/> Back Color1: <input id="bckClr1-1" onchange="changeOption(1, 'BackgroundColor1', this.value)" type="color"/> Back Color2: <input id="bckClr2-1" onchange="changeOption(1, 'BackgroundColor2', this.value)" type="color"/><br/> Render Mode:<select id="render1" onchange="changeOption(1, 'RenderMode', this.value)">
+<option>Flat</option>
+<option>Point</option>
+<option>Wireframe</option>
+<option>Smooth</option>
+</select>Definition:<select id="defini1" onchange="changeOption(1, 'Definition', this.value)">
+<option>Standard</option>
+<option>low</option>
+<option>high</option>
+</select></div>
+</div>
+<!-- Viewer 2 -->
+<div class="viewer-container">
+<p><canvas height="600" id="cv2" width="800"></canvas></p>
+<div class="controls">Model Color: <input id="mdlClr2" onchange="changeOption(2, 'ModelColor', this.value)" type="color" value="#0000ff"/> Back Color1: <input id="bckClr1-2" onchange="changeOption(2, 'BackgroundColor1', this.value)" type="color"/> Back Color2: <input id="bckClr2-2" onchange="changeOption(2, 'BackgroundColor2', this.value)" type="color"/><br/> Render Mode:<select id="render2" onchange="changeOption(2, 'RenderMode', this.value)">
+<option>Flat</option>
+<option>Point</option>
+<option>Wireframe</option>
+<option>Smooth</option>
+</select>Definition:<select id="defini2" onchange="changeOption(2, 'Definition', this.value)">
+<option>Standard</option>
+<option>low</option>
+<option>high</option>
+</select></div>
+</div>
+<!-- Viewer 3 -->
+<div class="viewer-container">
+<p><canvas height="600" id="cv3" width="800"></canvas></p>
+<div class="controls">Model Color: <input id="mdlClr3" onchange="changeOption(3, 'ModelColor', this.value)" type="color" value="#ff0000"/> Back Color1: <input id="bckClr1-3" onchange="changeOption(3, 'BackgroundColor1', this.value)" type="color"/> Back Color2: <input id="bckClr2-3" onchange="changeOption(3, 'BackgroundColor2', this.value)" type="color"/><br/> Render Mode:<select id="render3" onchange="changeOption(3, 'RenderMode', this.value)">
+<option>Flat</option>
+<option>Point</option>
+<option>Wireframe</option>
+<option>Smooth</option>
+</select>Definition:<select id="defini3" onchange="changeOption(3, 'Definition', this.value)">
+<option>Standard</option>
+<option>low</option>
+<option>high</option>
+</select></div>
+</div>
+<!-- Viewer 4 -->
+<div class="viewer-container">
+<p><canvas height="600" id="cv4" width="800"></canvas></p>
+<div class="controls">Model Color: <input id="mdlClr4" onchange="changeOption(4, 'ModelColor', this.value)" type="color" value="#ffff00"/> Back Color1: <input id="bckClr1-4" onchange="changeOption(4, 'BackgroundColor1', this.value)" type="color"/> Back Color2: <input id="bckClr2-4" onchange="changeOption(4, 'BackgroundColor2', this.value)" type="color"/><br/> Render Mode:<select id="render4" onchange="changeOption(4, 'RenderMode', this.value)">
+<option>Flat</option>
+<option>Point</option>
+<option>Wireframe</option>
+<option>Smooth</option>
+</select>Definition:<select id="defini4" onchange="changeOption(4, 'Definition', this.value)">
+<option>Standard</option>
+<option>low</option>
+<option>high</option>
+</select></div>
+</div>
+<script type="text/javascript">
+        var viewers = {};
+
+        function getOptions(viewerId) {
+            return {
+                ModelColor: document.getElementById("mdlClr" + viewerId).value,
+                BackgroundColor1: document.getElementById("bckClr1-" + viewerId).value,
+                BackgroundColor2: document.getElementById("bckClr2-" + viewerId).value,
+                RenderMode: document.getElementById("render" + viewerId).value,
+                Definition: document.getElementById("defini" + viewerId).value
+            };
+        }
+
+        function readSTLfile(viewerId, opt) {
+            var canvas = document.getElementById('cv' + viewerId);
+            var viewer = new JSC3D.Viewer(canvas);
+            viewer.setParameter('SceneUrl', opt.SceneUrl);
+            viewer.setParameter('InitRotationX', 0);
+            viewer.setParameter('InitRotationY', 0);
+            viewer.setParameter('InitRotationZ', 0);
+            viewer.setParameter('ModelColor', opt.ModelColor);
+            viewer.setParameter('BackgroundColor1', opt.BackgroundColor1);
+            viewer.setParameter('BackgroundColor2', opt.BackgroundColor2);
+            viewer.setParameter('RenderMode', opt.RenderMode);
+            viewer.setParameter('Definition', opt.Definition);
+            viewer.init();
+            viewer.update();
+            viewers[viewerId] = viewer;
+        }
+
+        function changeOption(viewerId, strOpt, strValue) {
+            if (viewers[viewerId]) {
+                viewers[viewerId].setParameter(strOpt, strValue);
+                viewers[viewerId].init();
+                viewers[viewerId].update();
+            }
+        }
+
+        function initViewers() {
+            readSTLfile(1, { ...getOptions(1), SceneUrl: 'https://s104.cycu.org/~41223150/41223150_w16_exam2-1.stl' });
+            readSTLfile(2, { ...getOptions(2), SceneUrl: 'https://s104.cycu.org/~41223150/41223150_w16_exam2-2.stl' });
+            readSTLfile(3, { ...getOptions(3), SceneUrl: 'https://s104.cycu.org/~41223150/41223150_w16_exam2-3.stl' });
+            readSTLfile(4, { ...getOptions(4), SceneUrl: 'https://s104.cycu.org/~41223150/41223150_w16_exam2-Assembly.stl' });
+        }
+
+        // 初始化所有 Viewer
+        initViewers();
+    
+</script><h1>HW4</h1>
 <p>Homework 4 (20%):</p>
 <p style="padding-left: 30px;">建立 <a href="https://mde.tw/cad2024/content/Quadruped.html">Dingo 機器狗</a>控制系統設計模擬場景</p>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/DingoQuadruped">https://github.com/mdecycu/DingoQuadruped</a></p>
